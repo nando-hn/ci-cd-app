@@ -177,10 +177,10 @@ Para el funcionamiento del CD pipeline se requieren los siguientes secrets en Gi
 
 ## Autores
 
-- **Persona 1** — Backend Developer
-- **Persona 2** — QA / Testing
-- **Persona 3** — DevOps / Infra
-- **Persona 4** — CI/CD + Documentación
+- **Luis Garcia** — Backend Developer
+- **Hector Enriquez** — QA / Testing
+- **Jonnathan Alegria** — DevOps / Infra
+- **Beyson Martinez** — CI/CD + Documentación
 
 ## Licencia
 

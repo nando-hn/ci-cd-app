@@ -145,6 +145,36 @@ El pipeline se ejecuta automáticamente en cada **push** y **pull request** a `m
 2. **Tests** — Ejecuta 6 tests unitarios contra PostgreSQL real
 3. **Coverage** — Genera reporte de cobertura (umbral ≥ 70%)
 
+## Pipeline CD
+
+El pipeline de **Continuous Deployment (CD)** se ejecuta automáticamente en cada **push a la rama `main`**.
+
+Este pipeline se encarga de:
+
+1. Construir la imagen Docker de la aplicación
+2. Autenticarse en Docker Hub mediante secrets del repositorio
+3. Publicar la imagen en Docker Hub
+
+### Imagen Docker
+
+La imagen generada está disponible en:
+
+https://hub.docker.com/r/nathanalegria/ci-cd-app
+
+### Funcionamiento
+
+- Se ejecuta automáticamente después de hacer merge a `main`
+- Utiliza el archivo `.github/workflows/cd.yml`
+- Usa Docker Buildx para construir la imagen
+- Publica la imagen con el tag `latest`
+
+### Secrets utilizados
+
+Para el funcionamiento del CD pipeline se requieren los siguientes secrets en GitHub:
+
+- `DOCKERHUB_USERNAME`
+- `DOCKERHUB_TOKEN`
+
 ## Autores
 
 - **Persona 1** — Backend Developer
@@ -155,3 +185,5 @@ El pipeline se ejecuta automáticamente en cada **push** y **pull request** a `m
 ## Licencia
 
 ISC
+
+

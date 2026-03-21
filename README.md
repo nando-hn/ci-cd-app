@@ -1,6 +1,6 @@
 # CI/CD App
 
-![CI Pipeline](https://github.com/USUARIO/ci-cd-app/actions/workflows/ci.yml/badge.svg)
+![CI Pipeline](https://github.com/nando-hn/ci-cd-app/actions/workflows/ci.yml/badge.svg)
 
 ## Descripción
 
@@ -48,7 +48,7 @@ Aplicación backend desarrollada con **Node.js + Express** que implementa operac
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/USUARIO/ci-cd-app.git
+git clone https://github.com/nando-hn/ci-cd-app.git
 cd ci-cd-app
 
 # Instalar dependencias

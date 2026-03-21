@@ -27,6 +27,15 @@ describe('Items API', () => {
     expect(res.body.name).toBe('Test item');
   });
 
+  test('POST /items should return 400 if name is missing', async () => {
+    const res = await request(app)
+      .post('/items')
+      .send({});
+
+    expect(res.statusCode).toBe(400);
+    expect(res.body.error).toBe('Name is required');
+  });
+
   test('GET /items should return items', async () => {
     const res = await request(app).get('/items');
     expect(res.body.length).toBeGreaterThan(0);
